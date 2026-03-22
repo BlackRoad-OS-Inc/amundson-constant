@@ -1,63 +1,73 @@
-# The Amundson Constant
+# The Amundson Constant & Framework
 
 **A_G = 1.244331783986725374135061629258...**
 
+Defined by Alexa Louise Amundson. Computed to 10,000,000 verified digits.
+
 ## Definition
 
-A_G = Σ G(n)/n! where G(n) = n/(1+1/n)^n
+```
+G(n) = n^(n+1) / (n+1)^n = n / (1 + 1/n)^n
+
+A_G = Σ G(n)/n!  for n = 0, 1, 2, ...
+```
 
 Six symbols: `n`, `1`, `+`, `/`, `^`, `()`
 
-## Properties
+## Key Results
 
-- Converges by n=18 to 15 digits, n=43 to 50 digits
-- Not found in any existing constant database
-- Derived from pure integer arithmetic (n^(n+1)/(n+1)^n)
-- Produces a valid quantum density matrix (trace = 1)
-- Von Neumann entropy: S = 1.272 (1.835 bits)
-- The circle x² + y² = 1/e² + 1/4 intersects Re(s)=1/2 at y=±1/e
-- G(1) = 1/2 (spin-1/2, the half-quantum)
-- L/H → e (Lagrangian/Hamiltonian ratio)
-- G(e) ≠ 1 (e is not self-consistent under its own definition)
+| Result | Value |
+|--------|-------|
+| G(1) = 1/2 | Critical line, spin-1/2, uncertainty minimum |
+| ζ(0) = -G(1) | Riemann zeta at zero |
+| ρ(n) = G(n)/(n!·A_G) | Valid density matrix (trace = 1) |
+| Von Neumann entropy | S = 1.272 (1.835 bits) |
+| L/H → e | Lagrangian/Hamiltonian ratio |
+| G superadditive | G(a)+G(b) > G(a+b) always (= entanglement) |
+| ∇²G < 0 | Concave, stable, no chaos |
+| 0 + 0^0 = 1 | Euler's identity reversed |
+| 1/(2e) gap | Irreducible correction term |
+| DNA has 4 bases | Π G(k) crosses 1 between n=4 and n=5 |
 
 ## Files
 
-- `AMUNDSON_CONSTANT.txt` — 1,000,001 verified digits
-- `AMUNDSON_CONSTANT_10M.txt` — 10,000,000 digits (computing)
+| File | Description |
+|------|-------------|
+| `AMUNDSON_CONSTANT.txt` | 1,000,001 verified digits |
+| `AMUNDSON_CONSTANT_10M.txt` | 10,000,000 verified digits |
+| `FRAMEWORK.md` | Complete paper — G(n) connections to quantum mechanics, chemistry, biology, number theory |
+| `compute.py` | mpmath computation script |
 
-## The Formula
+## 50+ Verified Identities
+
+See [FRAMEWORK.md](FRAMEWORK.md) for the full list, including connections to:
+
+- **Riemann**: G(1) = 1/2 = critical line
+- **Euler**: 0 + 0^0 = 1
+- **Gauss**: ρ(n) is a bell-curve density
+- **Boltzmann**: W = n^(n+1) + (n+1)^n
+- **Dirac**: 0 - 0^0 = -1 (antimatter)
+- **Ramanujan**: ζ(0) = -G(1) = -1/2
+- **Hamilton**: H = G(n), L/H → e
+- **Laplace**: ∇²G < 0 always
+- **Hilbert**: basis |n⟩, norm √(G/n!)
+- **Gödel**: G is below arithmetic
+- **Turing**: G always halts
+- **Pascal**: G encodes C(2n,n)
+
+## The Pigeonhole Reading
 
 ```
-G(n) = n / (1 + 1/n)^n = n^(n+1) / (n+1)^n
-
-G(0) = 0
-G(1) = 1/2
-G(2) = 8/9
-G(3) = 81/64
-G(4) = 1024/625
-
-A_G = Σ G(n)/n! = 1.244331783986725...
+G(n) = n^(n+1) / (n+1)^n
+     = (ways to crowd n+1 items into n boxes)
+       / (ways to spread n items across n+1 boxes)
 ```
 
-## Verified Identities (50+)
-
-1. G(n) = n^(n+1)/(n+1)^n
-2. G(n) = n(n/(n+1))^n
-3. G(n) = (n+1)(n/(n+1))^(n+1)
-4. G(n)/(n+1) = (n/(n+1))^(n+1) → 1/e
-5. Π G(k) = (n!)²/(n+1)^n
-6. Π G(k) = (2n)!/(C(2n,n)(n+1)^n)
-7. 1/G(n) = (1+1/n)^n/n
-8. ln(G(n)) = (n+1)ln(n) - n·ln(n+1)
-9. ρ(n) = G(n)/(n!·A_G) sums to 1 (density matrix)
-10. S = -Σ ρ ln(ρ) = 1.272 (1.835 bits)
-11. G(n+1) - G(n) → 1/e
-12. step/(step[-1]×step[-2]) → e
-13. L(n)/H(n) → e where H=G(n), L=n-(n/(n+1))^n
+Crowding over spacing. Everything else follows.
 
 ## Author
 
-Alexa Louise Amundson
+**Alexa Louise Amundson**
 Founder & CEO, BlackRoad OS, Inc.
 
 ## License
