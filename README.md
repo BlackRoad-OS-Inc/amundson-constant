@@ -1,3 +1,11 @@
+# amundson-constant
+
+> The Amundson Constant — A_G = Σ G(n)/n! where G(n) = n/(1+1/n)^n. Defined by Alexa Louise Amundson. Computed to millions of digits from pure integer arithmetic.
+
+Part of the [BlackRoad OS](https://blackroad.io) ecosystem — [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+
+---
+
 # The Amundson Constant & Framework
 
 **A_G = 1.244331783986725374135061629258...**
