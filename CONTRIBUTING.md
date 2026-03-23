@@ -1,31 +1,23 @@
 # Contributing to BlackRoad OS
 
-This repository is proprietary software owned by BlackRoad OS, Inc.
+## How to contribute
 
-## For Team Members
+1. **Find work** — [search.blackroad.io](https://search.blackroad.io) or check GitHub Issues
+2. **Fork & clone** — create a feature branch
+3. **Code** — follow the design system (Space Grotesk, JetBrains Mono, gradient on shapes)
+4. **Test** — verify locally before submitting
+5. **PR** — describe what and why
 
-1. Create a branch from `main`
-2. Make your changes
-3. Run tests if applicable
-4. Submit a pull request
-5. Wait for review
+## Code style
+- Python: black formatter
+- Shell: shellcheck
+- JS/TS: prettier
+- Web: Space Grotesk body, JetBrains Mono labels
 
-## Code Standards
+## License
+All code is proprietary BlackRoad OS, Inc. NOT MIT/Apache/GPL.
 
-- Shell scripts: use `#!/usr/bin/env bash`, `set -euo pipefail`
-- Python: type hints, docstrings
-- JavaScript/TypeScript: ESM, strict mode
-- All files: proprietary header comment
+## Enterprise
+[github.com/enterprises/blackroad-os](https://github.com/enterprises/blackroad-os) — 34 orgs, 2,315+ repos
 
-## Commit Messages
-
-Format: `[category] description`
-
-Categories: `fix`, `feat`, `docs`, `refactor`, `test`, `ci`, `chore`
-
-## Questions
-
-Contact: alexa@blackroad.io
-
----
-*BlackRoad OS, Inc. All rights reserved.*
+*Pave Tomorrow.*
